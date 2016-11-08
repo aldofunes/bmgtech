@@ -1,46 +1,59 @@
 @import '../../styles/breakpoints';
 @import '../../styles/colors';
 
-.container {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #222;
-  color: #fefefe;
-  padding: 1em;
+.container
+{
+    position: fixed;
+    bottom: 0;
 
-  @include media(sm) {
-    & {
-      width: 22em;
-      border-top-right-radius: 1em;
-      left: 0;
+    width: 100%;
+    padding: 1em;
+
+    color: #fefefe;
+    background: #222;
+
+    @include media(sm)
+    {
+        &
+        {
+            left: 0;
+
+            width: 22em;
+
+            border-top-right-radius: 1em;
+        }
     }
-  }
-
 }
 
-.text {
-  a {
-    color: #f0f0f0;
-    text-decoration: none;
-    border-bottom: 1px dotted #f0f0f0;
+.text
+{
+    a
+    {
+        text-decoration: none;
 
-    &:hover {
-      font-weight: 400;
+        color: #f0f0f0;
+        border-bottom: 1px dotted #f0f0f0;
+
+        &:hover
+        {
+            font-weight: 400;
+        }
     }
-  }
 }
 
-.button {
-  width: 100%;
-  background: none;
-  color: $primary;
-  border: 1px solid $primary;
-  border-radius: 0.5em;
-  padding: 0.5em;
+.button
+{
+    width: 100%;
+    padding: .5em;
 
-  &:hover {
-    background: $primary;
-    color: #f0f0f0;
-  }
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: .5em;
+    background: none;
+
+    &:hover
+    {
+        color: #f0f0f0;
+        background: $primary;
+    }
 }

@@ -1,56 +1,70 @@
 @import '../../../styles/breakpoints';
 @import '../../../styles/colors';
 
-.container {
-  text-align: center;
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  background: #f0f0f0;
-  align-items:  center;
+.container
+{
+    display: flex;
 
+    padding: 2em;
 
+    text-align: center;
+
+    background: #f0f0f0;
+
+    flex-wrap: wrap;
+    align-items: center;
 }
-.header {
-  flex: 1 1 100%;
-
+.header
+{
+    flex: 1 1 100%;
 }
-.image {
-  flex: 1 1 100%;
-  margin-bottom: 1em;
-  width: 100%;
+.image
+{
+    width: 100%;
+    margin-bottom: 1em;
 
-  @include media(sm) {
-    & {
-      width: 40%;
-      flex: 1 1 40%;
+    flex: 1 1 100%;
+    @include media(sm)
+    {
+        &
+        {
+            width: 40%;
+
+            flex: 1 1 40%;
+        }
     }
-  }
 }
-.text {
-  flex: 1 1 100%;
+.text
+{
+    flex: 1 1 100%;
+    @include media(sm)
+    {
+        &
+        {
+            padding-left: 1em;
 
-  @include media(sm) {
-    & {
-      flex: 1 1 55%;
-
-      padding-left: 1em;
+            flex: 1 1 55%;
+        }
     }
-  }
 }
 
-.callToAction {
-  text-decoration: none;
-  color: $primary;
-  padding: 1em;
-  background: none;
-  border: 1px solid $primary;
-  border-radius: 1em;
-  margin-top: 1em;
-  display: block;
+.callToAction
+{
+    display: block;
 
-  &:hover {
-    background: $primary;
-    color: $white;
-  }
+    margin-top: 1em;
+    padding: 1em;
+
+    text-decoration: none;
+
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 1em;
+    background: none;
+
+    &:hover
+    {
+        color: $white;
+        background: $primary;
+    }
 }

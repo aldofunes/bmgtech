@@ -2,12 +2,12 @@
 @import '../../styles/colors';
 
 .footer {
-  text-align: center;
-  background-color: $primary;
-  padding: 2em;
-  color: $white;
   display: flex;
+  padding: 2em;
+  text-align: center;
+  color: $white;
   flex-flow: row wrap;
+  background-color: $primary;
 }
 
 .copyright {
@@ -15,10 +15,29 @@
 }
 
 .socialLinks {
-  flex: 1 1 100%;
   padding: 1em 0;
+  flex: 1 1 100%;
+  font-size: 2em;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $lightGrey;
+    }
+  }
 }
 
 .links {
   flex: 1 1 100%;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $lightGrey;
+    }
+  }
 }

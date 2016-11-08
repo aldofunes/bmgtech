@@ -1,0 +1,23 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  padding: 1em;
+  color: #777;
+  text-decoration: none;
+  border-bottom: 1px solid $baseGrey;
+  background-color: #f7f7f7;
+
+  &:hover {
+    background-color: $lightGrey;
+  }
+}
+
+.activeMenuItem {
+  color: #777;
+}

@@ -1,0 +1,47 @@
+@import '../../../styles/breakpoints';
+
+.container {
+  display: flex;
+
+  padding: 2em;
+
+  background: #f0f0f0;
+
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+
+  flex: 1 1 100%;
+
+  h1 {
+    margin: 0;
+  }
+
+  @include media(sm) {
+    & {
+      flex: 1 1 50%;
+    }
+  }
+}
+
+.image {
+  text-align: center;
+
+  margin-top: 1em;
+
+  flex: 1 1 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @include media(sm) {
+    & {
+      flex: 1 1 50%;
+      margin: 0;
+    }
+  }
+}

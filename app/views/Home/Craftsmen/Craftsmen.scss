@@ -1,0 +1,56 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.container {
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  background: #f0f0f0;
+  align-items:  center;
+
+
+}
+.header {
+  flex: 1 1 100%;
+
+}
+.image {
+  flex: 1 1 100%;
+  margin-bottom: 1em;
+  width: 100%;
+
+  @include media(sm) {
+    & {
+      width: 40%;
+      flex: 1 1 40%;
+    }
+  }
+}
+.text {
+  flex: 1 1 100%;
+
+  @include media(sm) {
+    & {
+      flex: 1 1 55%;
+
+      padding-left: 1em;
+    }
+  }
+}
+
+.callToAction {
+  text-decoration: none;
+  color: $primary;
+  padding: 1em;
+  background: none;
+  border: 1px solid $primary;
+  border-radius: 1em;
+  margin-top: 1em;
+  display: block;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}

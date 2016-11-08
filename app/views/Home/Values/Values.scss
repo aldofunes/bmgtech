@@ -1,0 +1,33 @@
+@import '../../../styles/breakpoints';
+
+.container {
+  text-align: center;
+  padding: 2em;
+}
+
+.header {
+}
+
+.subheader {
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.value {
+  flex: 1 1 100%;
+  margin: 2em 0;
+
+  img {
+    height: 8em;
+    max-width: 100%;
+  }
+
+  @include media(md) {
+    & {
+      flex: 1 1 30%;
+    }
+  }
+}

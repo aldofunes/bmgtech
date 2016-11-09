@@ -1,0 +1,30 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.section {
+  background: #005db7;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: $white;
+  text-align: center;
+  flex: 1 1 100%;
+
+  @include media(md) {
+    flex: 1 1 50%;
+  }
+}
+
+.image {
+  flex: 1 1 100%;
+  width: 100%;
+
+  @include media(md) {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+}

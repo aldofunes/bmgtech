@@ -1,0 +1,36 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center
+}
+
+.text1 {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.text2 {
+  flex: 1 1 100%;
+  text-align: center;
+
+  @include media(md) {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+}
+
+.image {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 20em;
+
+  @include media(md) {
+    flex: 1 1 40%;
+    width: 40%;
+    padding-right: 1em;
+  }
+}

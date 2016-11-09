@@ -250,7 +250,7 @@ exports.getSVG = function () {
     module: {
       rules: [
         {
-          test: /\.svg$/,
+          test: /\.(svg|jpg|png)$/,
           use: 'url-loader'
         }
       ]

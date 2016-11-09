@@ -1,0 +1,47 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.section {
+  background-color: $lighterGrey;
+}
+
+.header {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  @include media(sm) {
+    & {
+      margin: 0 -1em;
+    }
+  }
+}
+
+.item {
+  flex: 1 1 100%;
+  text-align: center;
+
+  @include media(sm) {
+    & {
+      flex: 0 1 40%;
+      margin: 0 1em;
+    }
+  }
+
+  @include media(md) {
+    & {
+      flex: 1 1 25%;
+      margin: 0 1em;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 10em;
+  }
+}

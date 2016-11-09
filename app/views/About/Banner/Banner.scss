@@ -1,0 +1,9 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.container {
+  background: url('./code-dark.jpg') no-repeat center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+}

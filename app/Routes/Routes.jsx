@@ -4,6 +4,7 @@ import App from '../layouts/App';
 import Home from '../views/Home';
 import About from '../views/About';
 import Apps from '../views/Apps';
+import Sites from '../views/Sites';
 import NotFound from '../views/NotFound';
 
 const Routes = () => (
@@ -12,6 +13,7 @@ const Routes = () => (
       <IndexRoute component={Home}/>
       <Route path="about" component={About}/>
       <Route path="apps" component={Apps}/>
+      <Route path="sites" component={Sites}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>

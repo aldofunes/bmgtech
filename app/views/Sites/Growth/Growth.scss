@@ -1,0 +1,21 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.text {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.image {
+  flex: 1 1 100%;
+
+  img {
+    width: 100%;
+  }
+}

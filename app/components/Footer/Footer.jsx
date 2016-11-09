@@ -13,21 +13,21 @@ const Footer = () => (
       <Link to="privacy">Privacy Policy</Link>
     </div>
     <div className={styles.socialLinks}>
-      <Link to="https://www.facebook.com/BeamingTech">
+      <a href="https://www.facebook.com/BeamingTech" target="_blank">
         <FaFacebookSquare />
-      </Link>
-      <Link to="https://www.linkedin.com/company/beaming-technologies-ltd.">
+      </a>
+      <a href="https://www.linkedin.com/company/beaming-technologies-ltd." target="_blank">
         <FaLinkedinSquare />
-      </Link>
-      <Link to="https://twitter.com/BeamingTech">
+      </a>
+      <a href="https://twitter.com/BeamingTech" target="_blank">
         <FaTwitterSquare />
-      </Link>
-      <Link to="https://plus.google.com/+BmgtechIo">
+      </a>
+      <a href="https://plus.google.com/+BmgtechIo" target="_blank">
         <FaGooglePlusSquare />
-      </Link>
-      <Link to="mailto:hello@bmgtech.io">
+      </a>
+      <a href="mailto:hello@bmgtech.io">
         <FaEnvelopeSquare />
-      </Link>
+      </a>
     </div>
     <div className={styles.copyright}>
       © {new Date().getFullYear()} Beaming Technologies Ltd.

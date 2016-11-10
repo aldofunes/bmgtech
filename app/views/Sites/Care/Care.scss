@@ -1,9 +1,12 @@
-@import '../../../styles/breakpoints';
+@import '../../../styles/mixins';
 @import '../../../styles/colors';
 
 .section {
-  display: flex;
-  flex-flow: row wrap;
+}
+
+.container {
+  @include container;
+  text-align: center;
 }
 
 .header {
@@ -12,19 +15,48 @@
 
 
 .image {
-  flex: 1 1 100%;
+  flex: 0 1 auto;
 
   img {
     width: 100%;
   }
+
+  @include media(md) {
+    width: 45%;
+  }
+
+  @include media(lg) {
+    width: 30%;
+    order: 2;
+    padding: 0 1em;
+  }
 }
 
-.text {
-  flex: 1 1 100%;
-  text-align: center;
+.text1 {
+  flex: 0 1 auto;
+
+  @include media(md) {
+    width: 45%;
+    padding-left: 1em;
+  }
+
+  @include media(lg) {
+    width: 30%;
+    order: 1;
+  }
 }
 
-.subText {
-  flex: 1 1 100%;
+
+.text2 {
+  flex: 0 1 auto;
+
+  @include media(lg) {
+    width: 30%;
+    order: 3;
+  }
+}
+
+.text3 {
+  order: 4;
   text-align: center;
 }

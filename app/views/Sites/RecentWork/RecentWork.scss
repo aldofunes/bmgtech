@@ -1,10 +1,12 @@
-@import '../../../styles/breakpoints';
+@import '../../../styles/mixins';
 @import '../../../styles/colors';
 
 .section {
-  display: flex;
-  flex-flow: row wrap;
   background-color: $lighterGrey;
+}
+
+.container{
+  @include container;
 }
 
 .text {
@@ -13,9 +15,10 @@
 }
 
 .card {
-  flex: 1 1 100%;
+  flex: 1 1 auto;
   background-color: $white;
   margin: 1em;
+  max-width: 17em;
 
   box-shadow: 0 0 1em $darkerGrey;
   border-radius: 1em;

@@ -1,7 +1,15 @@
-.sites {}
+@import '../../styles/mixins';
+@import '../../styles/colors';
 
-.partner {
-  background: dodgerblue;
+.view {
+}
+
+.container {
+  @include container;
   color: whitesmoke;
   text-align: center;
+}
+
+.partner {
+  background-color: dodgerblue;
 }

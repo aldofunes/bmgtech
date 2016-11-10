@@ -2,7 +2,6 @@
 @import '../../../styles/colors';
 
 .section {
-
 }
 
 .container {
@@ -10,15 +9,26 @@
 }
 
 .text {
-  flex: 1 1 100%;
+  flex: 0 1 auto;
   text-align: center;
+  max-width: 30em;
+
+  @include media(md) {
+    width: 50%;
+  }
 }
 
 .image {
-  flex: 1 1 100%;
+  flex: 0 1 auto;
   max-width: 30em;
 
   img {
     width: 100%;
+  }
+
+  @include media(md) {
+    & {
+      width: 50%;
+    }
   }
 }

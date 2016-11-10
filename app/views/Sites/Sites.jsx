@@ -6,11 +6,13 @@ import Care from './Care';
 import RecentWork from './RecentWork';
 
 const Sites = () => (
-  <div className={styles.sites}>
+  <div className={styles.view}>
     <Banner />
     <Growth />
     <section className={styles.partner}>
-      <h2>You walk away with an amazing website and a true partner</h2>
+      <div className={styles.container}>
+        <h2>You walk away with an amazing website and a true partner</h2>
+      </div>
     </section>
     <Care />
     <RecentWork />

@@ -11,7 +11,11 @@ exports.indexTemplate = function (options) {
         title: options.title,
         appMountId: options.appMountId,
         inject: false,
-        mobile: true
+        mobile: true,
+        scripts: [
+          'https://bmgtech.agilecrm.com/stats/min/agile-min.js',
+          'https://d1l6p2sc9645hc.cloudfront.net/tracker.js'
+        ]
       })
     ]
   }
@@ -245,7 +249,7 @@ exports.extractCSS = function () {
   };
 };
 
-exports.getSVG = function () {
+exports.getImg = function () {
   return {
     module: {
       rules: [
@@ -255,5 +259,18 @@ exports.getSVG = function () {
         }
       ]
     }
+  }
+};
+
+exports.envVars = function (settings) {
+  return {
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          'ENV': JSON.stringify(settings.ENV),
+          'NODE_ENV': JSON.stringify(settings.NODE_ENV)
+        }
+      })
+    ]
   }
 };

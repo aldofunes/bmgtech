@@ -1,9 +1,16 @@
-@import '../../../styles/breakpoints';
+@import '../../../styles/mixins';
 @import '../../../styles/colors';
 
-.container {
+.section {
   background: url('./code-dark.jpg') no-repeat center;
   background-size: cover;
-  color: $white;
+}
+
+.container {
+  @include container;
+  flex-direction: column;
   text-align: center;
+  color: $white;
+  min-height: 50vh;
+
 }

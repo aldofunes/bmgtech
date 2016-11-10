@@ -1,20 +1,21 @@
-@import '../../../styles/breakpoints';
+@import '../../../styles/mixins';
 @import '../../../styles/colors';
 
+
+.section {}
+
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  justify-content: center;
+  @include container;
 }
 
 .text {
   flex: 1 1 100%;
+  box-sizing: border-box;
 
   @include media(md) {
     & {
       text-align: right;
-      flex: 1 1 40%;
+      flex: 1 1 50%;
     }
   }
 }
@@ -22,10 +23,16 @@
 .image {
   flex: 1 1 100%;
   width: 100%;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+  }
 
   @include media(md) {
     & {
-      flex: 1 1 40%;
+      flex: 1 1 50%;
+      padding-left: 2em;
     }
   }
 }

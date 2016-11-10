@@ -4,7 +4,9 @@ import styles from './Agile.scss';
 const Agile = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-      <h2>How we do it</h2>
+      <div className={styles.header}>
+        <h2>How we do it</h2>
+      </div>
       <div className={styles.text}>
         <p>
           Building software the right way requires care and attention. Every client is unique and

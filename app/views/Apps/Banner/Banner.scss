@@ -1,12 +1,12 @@
-@import '../../../styles/breakpoints';
+@import '../../../styles/mixins';
 @import '../../../styles/colors';
 
 .section {
   background: #005db7;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+}
+
+.container {
+  @include container;
 }
 
 .text {

@@ -9,6 +9,11 @@
   @include container;
 }
 
+.header {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
 .text {
   flex: 0 1 auto;
   text-align: center;

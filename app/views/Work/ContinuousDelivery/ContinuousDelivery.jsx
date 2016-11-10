@@ -4,7 +4,9 @@ import styles from './ContinuousDelivery.scss';
 const ContinuousDelivery = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-      <h2>Continuous Delivery</h2>
+      <div className={styles.header}>
+        <h2>Continuous Delivery</h2>
+      </div>
       <div className={styles.text}>
         <h5>
           User Stories are delivered for your review every two or three weeks. This way you can see

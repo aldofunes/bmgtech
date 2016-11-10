@@ -2,6 +2,8 @@ const path = require('path');
 const merge = require('webpack-merge');
 require('dotenv').config();
 const pkg = require('./package.json');
+const settingsDev = require('./settings-dev.json');
+const settingsProd = require('./settings-prod.json');
 
 const parts = require('./libs/parts');
 
@@ -29,7 +31,7 @@ const common = merge(
     title: 'BMG Tech',
     appMountId: 'app'
   }),
-  parts.getSVG(),
+  parts.getImg(),
   parts.loadJSX(PATHS.app),
   parts.loadJSON()
 );
@@ -66,7 +68,8 @@ switch (process.env.npm_lifecycle_event) {
         entries: Object.keys(pkg.dependencies)
       }),
       parts.minify(),
-      parts.setupCSS()
+      parts.setupCSS(),
+      parts.envVars(settingsProd)
     );
     break;
   case 'test':
@@ -83,7 +86,8 @@ switch (process.env.npm_lifecycle_event) {
         devtool: 'inline-source-map'
       },
       parts.loadIsparta(PATHS.app),
-      parts.setupCSS()
+      parts.setupCSS(),
+      parts.envVars(settingsDev)
     );
     break;
   default:
@@ -101,7 +105,8 @@ switch (process.env.npm_lifecycle_event) {
         host: process.env.HOST,
         port: process.env.PORT
       }),
-      parts.enableReactPerformanceTools()
+      parts.enableReactPerformanceTools(),
+      parts.envVars(settingsDev)
     );
 }
 

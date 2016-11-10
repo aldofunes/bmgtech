@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 exports.indexTemplate = function (options) {
   return {
@@ -16,7 +17,8 @@ exports.indexTemplate = function (options) {
           'https://bmgtech.agilecrm.com/stats/min/agile-min.js',
           'https://d1l6p2sc9645hc.cloudfront.net/tracker.js'
         ]
-      })
+      }),
+      new FaviconsWebpackPlugin('./assets/emblem.png')
     ]
   }
 };

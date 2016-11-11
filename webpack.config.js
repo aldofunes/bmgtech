@@ -68,7 +68,7 @@ switch (process.env.npm_lifecycle_event) {
         entries: Object.keys(pkg.dependencies)
       }),
       parts.minify(),
-      parts.setupCSS(),
+      parts.extractCSS(),
       parts.envVars(settingsProd)
     );
     break;

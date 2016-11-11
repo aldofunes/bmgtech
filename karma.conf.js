@@ -15,10 +15,7 @@ module.exports = function karmaConfig (config) {
 
       // Reference: https://github.com/karma-runner/karma-coverage
       // Output code coverage files
-      'coverage',
-
-      // Comment out when not using macOS, it will crash otherwise
-      'osx'
+      'coverage'
     ],
 
     files: [

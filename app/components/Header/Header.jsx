@@ -26,11 +26,12 @@ class Header extends React.Component {
     const { isOpen } = this.state;
     return (
       <div className={styles.header}>
-        <TopBar onToggle={this.toggle} />
 
+        <TopBar onToggle={this.toggle} />
         {isOpen ? (
           <MobileMenu onClick={this.toggle} />
         ) : ''}
+
 
       </div>
     );

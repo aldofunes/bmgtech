@@ -221,8 +221,7 @@ exports.extractCSS = function () {
         {
           test: /\.css$/,
           use: [
-            'file-loader',
-            'extract-loader',
+            'style-loader',
             {
               loader: 'css-loader',
               options: {
@@ -233,21 +232,16 @@ exports.extractCSS = function () {
         },
         {
           test: /\.scss$/,
-          use: [
-            'file-loader',
-            'extract-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1
-              }
-            },
-            'sass-loader'
-          ]
-        }
+          loader: ExtractTextPlugin.extract({
+            fallbackLoader: 'style-loader',
+            loader: 'css-loader?sourceMap&modules&importLoaders=2&localIdentName=[name]__[local]___[hash:base64:5]&minimize!postcss!sass?sourceMap'
+          })
+        },
       ]
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin('styles.[chunkhash].css')
+    ]
   };
 };
 
@@ -257,7 +251,7 @@ exports.getImg = function () {
       rules: [
         {
           test: /\.(svg|jpg|png)$/,
-          use: 'url-loader'
+          use: 'file-loader'
         }
       ]
     }

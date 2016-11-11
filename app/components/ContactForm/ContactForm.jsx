@@ -11,7 +11,11 @@ class ContactForm extends React.Component {
       lastName: '',
       email: '',
       message: '',
-      formValid: false,
+      firstNameValid: false,
+      lastNameValid: false,
+      emailValid: false,
+      messageValid: false,
+      isSubmitting: false,
       success: false,
     };
 
@@ -23,32 +27,48 @@ class ContactForm extends React.Component {
   }
 
   onChangeFirstName(event) {
+    const firstName = event.target.value;
+
     this.setState({
-      firstName: event.target.value
+      firstName,
+      firstNameValid: Boolean(firstName)
     });
   }
 
   onChangeLastName(event) {
+    const lastName = event.target.value;
+
     this.setState({
-      lastName: event.target.value
+      lastName,
+      lastNameValid: Boolean(lastName)
     });
   }
 
   onChangeEmail(event) {
+    const email = event.target.value;
+
     this.setState({
-      email: event.target.value
+      email,
+      emailValid: Boolean(email)
     });
   }
 
   onChangeMessage(event) {
+    const message = event.target.value;
+
     this.setState({
-      message: event.target.value
+      message,
+      messageValid: Boolean(message)
     });
   }
 
   onSubmit(event) {
     event.preventDefault();
-    const {firstName, lastName, email, message } = this.state;
+    const { firstName, lastName, email, message } = this.state;
+
+    this.setState({
+      isSubmitting: true
+    });
 
     _gs('event', 'Web form submission');
     _gs('identify', {
@@ -80,19 +100,30 @@ class ContactForm extends React.Component {
               message: '',
             });
           },
-          error({error}) {
-            console.log({error});
+          error({ error }) {
+            console.log({ error });
           }
         });
       },
-      error({error}) {
-        console.log({error});
+      error({ error }) {
+        console.log({ error });
       }
     });
   }
 
-  render () {
-    const {firstName, lastName, email, message} = this.state;
+  render() {
+    const {
+      firstName,
+      lastName,
+      email,
+      message,
+      firstNameValid,
+      lastNameValid,
+      emailValid,
+      messageValid
+    } = this.state;
+
+    const formValid = (firstNameValid && lastNameValid && emailValid && messageValid);
 
     return (
       <form className={styles.form} onSubmit={this.onSubmit}>
@@ -125,7 +156,7 @@ class ContactForm extends React.Component {
           onChange={this.onChangeMessage}
         />
 
-        <button className={styles.submitButton} type="submit">Submit</button>
+        <button disabled={!formValid} className={styles.submitButton} type="submit">Submit</button>
       </form>
     )
   }

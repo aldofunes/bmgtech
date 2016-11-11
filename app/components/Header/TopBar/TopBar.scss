@@ -8,11 +8,12 @@
   background: $white;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1em;
 }
 
 .logo {
   height: 3em;
-  margin: .6em 1em;
+  margin: .6em 0;
   flex: 1;
 }
 
@@ -21,4 +22,8 @@
   color: #333;
   border: none;
   background: none;
+
+  @include media(lg) {
+    display: none;
+  }
 }

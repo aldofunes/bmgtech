@@ -2,11 +2,10 @@
 @import '../../../styles/colors';
 
 .menu {
-  display: flex;
-  flex-direction: column;
+  display: none;
 
   @include media(lg) {
-    display: none;
+    display: flex;
   }
 }
 
@@ -14,8 +13,6 @@
   padding: 1em;
   text-decoration: none;
   color: #777;
-  border-bottom: 1px solid $baseGrey;
-  background-color: #f7f7f7;
 
   &:hover {
     background-color: $lightGrey;
@@ -23,5 +20,6 @@
 }
 
 .activeMenuItem {
-  color: #777;
+  background-color: $lightGrey;
+
 }
